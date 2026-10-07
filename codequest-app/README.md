@@ -26,4 +26,5 @@ Cualquier correo nuevo `@mail.udp.cl` / `@udp.cl` se registra automáticamente c
 ## Scripts
 - `npm run dev` — reinicia el servidor al guardar cambios.
 - `npm run build` — regenera `public/*.html` desde `../stitch_codequest_learning_platform_ui` (si vuelves a exportar desde Stitch).
+- `npm run build:pages` — genera `../docs/`, la versión estática para GitHub Pages (sin servidor: los datos se guardan en el navegador y "Ejecutar" Java no está disponible).
 - `npm run reset-db` — borra los datos y vuelve a los usuarios demo.

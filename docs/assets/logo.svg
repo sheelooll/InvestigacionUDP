@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" fill="none">
+  <path d="M8 8 L24 8 L32 20 L24 32 L8 32 L16 20 Z" fill="#22D3EE" opacity="0.15" stroke="#22D3EE" stroke-width="2"/>
+  <polygon points="16,14 26,20 16,26" fill="#22D3EE"/>
+  <rect x="22" y="12" width="3" height="16" fill="#A78BFA" rx="1"/>
+  <text x="42" y="26" font-family="'Chakra Petch', sans-serif" font-weight="700" font-size="20" fill="#EEF2FF" letter-spacing="1">CODE<tspan fill="#22D3EE">QUEST</tspan></text>
+  <text x="42" y="35" font-family="'JetBrains Mono', monospace" font-size="7" fill="#8C95B8" letter-spacing="1.5">UDP // ACADÈMIC IDE</text>
+</svg>
