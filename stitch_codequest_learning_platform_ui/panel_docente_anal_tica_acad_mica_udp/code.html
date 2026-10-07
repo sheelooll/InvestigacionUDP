@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>CODEQUEST UDP // Java Learning Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=JetBrains+Mono:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"amber":"#FFB547","bg-void":"#070A12","on-surface":"#dee1f9","surface-dim":"#0e1323","surface-variant":"#2f3446","primary-fixed-dim":"#2fd9f4","background":"#0e1323","on-background":"#dee1f9","primary":"#8aebff","surface-container-low":"#161b2b","red":"#FF5D73","green":"#3DDC97","border":"#2A3561","inverse-on-surface":"#2b3041","surface-container-lowest":"#080d1d","on-primary-fixed-variant":"#004e5a","surface-container":"#1a1f30","on-secondary-fixed-variant":"#4f319c","tertiary":"#ffd6a2","on-primary-container":"#005763","tertiary-fixed":"#ffddb4","border-strong":"#3B4A80","on-secondary-fixed":"#21005e","violet":"#A78BFA","surface-tint":"#2fd9f4","on-tertiary":"#452b00","tertiary-container":"#fcb244","surface-2":"#18213F","surface":"#0e1323","on-primary":"#00363e","surface-3":"#222D52","cyan":"#22D3EE","primary-fixed":"#a2eeff","on-tertiary-container":"#6e4600","on-error-container":"#ffdad6","surface-1":"#111831","secondary-fixed-dim":"#cebdff","secondary-fixed":"#e8ddff","on-primary-fixed":"#001f25","surface-bright":"#34394a","on-tertiary-fixed":"#291800","tertiary-fixed-dim":"#ffb955","surface-container-highest":"#2f3446","inverse-surface":"#dee1f9","text-muted":"#8C95B8","secondary-container":"#4f319c","on-secondary":"#381385","outline":"#859397","text-body":"#C7CEE8","bg-base":"#0B1020","on-secondary-container":"#bea8ff","on-surface-variant":"#bbc9cd","inverse-primary":"#006877","outline-variant":"#3c494c","java":"#F89820","primary-container":"#22d3ee","surface-container-high":"#25293a","on-error":"#690005","text-hi":"#EEF2FF","error-container":"#93000a","error":"#ffb4ab","text-disabled":"#566089","secondary":"#cebdff","on-tertiary-fixed-variant":"#633f00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-md":"1.5rem","space-xl":"2.5rem","space-md":"1rem","margin":"1rem","gutter":"1rem","margin-md":"2rem"},fontFamily:{"label-md":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"code-body":["JetBrains Mono"],"body-lg":["IBM Plex Sans"],"headline-xl":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["IBM Plex Sans"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["IBM Plex Sans"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"code-body":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-bg-void font-body-md text-text-body antialiased selection:bg-cyan selection:text-bg-void"><aside class="fixed left-0 top-0 h-full w-72 bg-bg-base z-50 flex flex-col justify-between border-r border-border shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border bg-surface-1/50"><div class="w-8 h-8 rounded bg-surface-2 border border-border-strong flex items-center justify-center"><span class="material-symbols-outlined text-cyan text-[18px]">terminal</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-hi leading-none">CODEQUEST</span><span class="px-1 py-0.5 rounded bg-surface-3 border border-border text-[9px] font-label-sm text-cyan leading-none">UDP</span></div><span class="font-label-sm text-[9px] text-text-muted tracking-wider truncate uppercase mt-0.5">Facultad de Ingeniería</span></div></div><div class="p-space-md border-b border-border bg-surface-1/20"><div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5"><span>// MODO ACTUAL</span><span class="flex items-center gap-1 text-green text-[10px]"><span class="w-1.5 h-1.5 rounded-full bg-green animate-pulse"></span>ONLINE</span></div><div class="grid grid-cols-2 gap-1 p-1 bg-surface-2 rounded border border-border"><button class="py-1 px-2 rounded bg-cyan text-bg-void font-label-sm text-label-sm font-bold text-center tracking-wide">ESTUDIANTE</button><button class="py-1 px-2 rounded text-text-muted hover:text-text-hi font-label-sm text-label-sm text-center tracking-wide transition-colors">DOCENTE</button></div></div><nav class="flex flex-col py-space-sm gap-0.5" data-active-classes="bg-surface-2 text-cyan font-bold border-l-2 border-cyan"><div class="px-space-md pt-space-xs pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 01 RUTA FORMATIVA</div><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">HUD-01</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="el-camino" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">route</span><span>El Camino</span></div><span class="px-1.5 py-0.5 rounded bg-violet/20 border border-violet/50 text-violet font-label-sm text-[9px] tracking-wide">ACTO II</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="practica-libre" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">code_blocks</span><span>Práctica Libre</span></div><span class="font-label-sm text-[9px] text-cyan tracking-tighter">IDE</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="logros-y-rangos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">military_tech</span><span>Logros &amp; Rangos</span></div><span class="font-label-sm text-[9px] text-amber tracking-tighter">XP</span></a><div class="px-space-md pt-space-md pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 02 GESTIÓN DOCENTE</div><a aria-current="page" class="flex items-center justify-between px-space-md py-2 transition-all bg-surface-2 text-cyan font-bold border-l-2 border-cyan" data-path="panel-docente" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">team_dashboard</span><span>Panel Docente</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">ADM</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="generador-ia" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">psychology</span><span>Generador IA</span></div><span class="px-1.5 py-0.5 rounded bg-cyan/20 border border-cyan/60 text-cyan font-label-sm text-[9px] tracking-wide">NUEVO</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="banco-ejercicios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dataset</span><span>Banco Ejercicios</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">JAVA</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="rubricas-analitica" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">query_stats</span><span>Rúbricas &amp; Analítica</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">MET</span></a></nav></div><div class="p-space-md border-t border-border bg-surface-1/40 flex flex-col gap-2"><a class="flex items-center justify-between text-on-surface-variant hover:text-cyan text-body-sm font-body-sm transition-colors" data-path="documentacion-tecnica" href="#"><span>Documentación Técnica</span><span class="material-symbols-outlined text-[16px]">open_in_new</span></a><div class="flex items-center justify-between pt-1 border-t border-border/50"><span class="font-label-sm text-[10px] text-text-disabled">v2.4.0-udp</span><span class="font-label-sm text-[10px] text-cyan">// Java 21 LTS</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-bg-base/95 backdrop-blur-md border-b border-border z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="font-label-sm text-[11px] text-text-muted">NODO:</span><span class="font-label-sm text-label-sm text-cyan px-2 py-0.5 rounded bg-surface-2 border border-border">SRV-UDP-SCL01</span></div><div class="h-4 w-px bg-border"></div><div class="flex items-center gap-1.5 text-text-muted font-label-sm text-[11px]"><span class="w-2 h-2 rounded-full bg-green shadow-[0_0_8px_#3DDC97]"></span><span>RED UDP CONECTADA</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-1 border border-border"><div class="flex flex-col"><div class="flex items-center justify-between gap-space-md text-[10px] font-label-sm"><span class="text-cyan font-bold">NVL 47/150</span><span class="text-amber font-mono">2.340 / 3.000 XP</span></div><div class="w-36 h-1.5 bg-surface-3 rounded-full mt-1 overflow-hidden"><div class="h-full bg-amber shadow-[0_0_12px_#FFB547]" style="width: 78%;"></div></div></div><div class="h-6 w-px bg-border"></div><div class="flex items-center gap-1 px-1 text-amber font-label-sm text-label-sm" title="Racha de estudio activa"><span class="text-base leading-none">🔥</span><span class="font-bold">6D</span></div></div><div class="flex items-center gap-2"><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-cyan hover:border-cyan transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cyan shadow-[0_0_6px_#22D3EE]"></span></button><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-amber hover:border-amber transition-colors"><span class="material-symbols-outlined text-[18px]">emoji_events</span></button><div class="flex items-center gap-2 pl-2 border-l border-border"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-[11px] text-text-hi font-bold leading-tight">est.diego.p</span><span class="font-label-sm text-[9px] text-text-muted leading-none">UDP INF-302</span></div></div></div></div></header><main class="relative pt-16 min-h-screen bg-bg-base"><div class="flex flex-col w-full">
+<!-- AMBIENT DEPTH LAYER -->
+<div class="relative w-full bg-surface-container-lowest text-text-body p-space-md lg:p-space-xl flex flex-col gap-space-lg">
+<!-- SUBTLE TELEMETRY GLOWS -->
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan/5 rounded-full blur-3xl pointer-events-none -mt-24"></div>
+<div class="absolute top-1/3 left-0 w-80 h-80 bg-violet/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- 01. HEADER AND COHORT DOSSIER -->
+<section class="relative flex flex-col gap-space-md">
+<!-- SYSTEM STRIP -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-1 px-space-md py-space-xs rounded shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-cyan animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-cyan tracking-wider uppercase">// FACULTAD DE INGENIERÍA Y CIENCIAS // ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES</span>
+</div>
+<div class="flex items-center gap-space-md text-text-muted font-label-sm text-label-sm">
+<span>DOCENTE TITULAR: <strong class="text-text-hi font-body-sm">Dr. Roberto Carvajal S.</strong></span>
+<span class="w-1 h-1 rounded-full bg-text-disabled"></span>
+<span class="text-amber">PERÍODO: PRIMAVERA 2024</span>
+</div>
+</div>
+<!-- TITLE & PRIMARY ACTIONS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-3 text-cyan font-label-sm text-label-sm tracking-tight">INF-204</span>
+<span class="font-headline-lg text-headline-lg font-bold text-text-hi tracking-tight">Panel Docente // Métricas de Cohorte</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted flex items-center gap-2">
+<span>Programación Orientada a Objetos en Java 21</span>
+<span class="text-text-disabled">/</span>
+<span class="text-cyan">Secciones 1 &amp; 2 (Cátedra + Labs)</span>
+</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-2 hover:bg-surface-3 text-text-hi font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-text-muted">tune</span>
+<span>CONFIGURAR RÚBRICAS</span>
+</button>
+<button class="relative group flex items-center gap-2 px-space-lg py-2.5 rounded bg-cyan text-bg-void font-label-md text-label-md font-bold tracking-wide transition-all shadow-md hover:brightness-110 active:scale-[0.99] [clip-path:polygon(0_0,calc(100%-8px)_0,100%_8px,100%_100%,0_100%)]">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span>+ CREAR EJERCICIO CON IA</span>
+<div class="absolute top-0 right-0 w-2 h-2 bg-text-hi/40 pointer-events-none"></div>
+</button>
+</div>
+</div>
+<!-- KPI METRIC GAUGES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- KPI 1 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-1 rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// ESTUDIANTES</span>
+<span class="material-symbols-outlined text-cyan text-[18px]">groups</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-text-hi leading-none">84</span>
+<span class="font-label-sm text-label-sm text-text-muted">/ 86 inscritos</span>
+</div>
+<span class="font-label-sm text-label-sm text-green mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green"></span>
+              97.6% sincronía activa
+            </span>
+</div>
+<div class="h-0.5 w-full bg-surface-3 mt-space-sm overflow-hidden">
+<div class="h-full bg-cyan" style="width: 97.6%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-1 rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// BANCO EJERCICIOS</span>
+<span class="material-symbols-outlined text-amber text-[18px]">inventory_2</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-text-hi leading-none">156</span>
+<span class="font-label-sm text-label-sm text-amber font-mono">JAVA 21</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted mt-1">42 creados por IA docente</span>
+</div>
+<div class="h-0.5 w-full bg-surface-3 mt-space-sm overflow-hidden">
+<div class="h-full bg-amber" style="width: 72%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-1 rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// EVALUACIONES</span>
+<span class="material-symbols-outlined text-violet text-[18px]">assignment_turned_in</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-text-hi leading-none">03</span>
+<span class="font-label-sm text-label-sm text-violet font-mono">EN CURSO</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted mt-1">Checkpoint 9 • Taller • Midterm</span>
+</div>
+<div class="h-0.5 w-full bg-surface-3 mt-space-sm overflow-hidden">
+<div class="h-full bg-violet" style="width: 60%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-1 rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// NOTA COHORTE</span>
+<span class="material-symbols-outlined text-green text-[18px]">analytics</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-green leading-none">86.4</span>
+<span class="font-label-sm text-label-sm text-text-muted">/ 100 pt</span>
+</div>
+<span class="font-label-sm text-label-sm text-green mt-1">Aprobación proyectada: 89.2%</span>
+</div>
+<div class="h-0.5 w-full bg-surface-3 mt-space-sm overflow-hidden">
+<div class="h-full bg-green" style="width: 86.4%;"></div>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-1 rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// RUTA RPG PROMEDIO</span>
+<span class="material-symbols-outlined text-amber text-[18px]">explore</span>
+</div>
+<div class="mt-space-md flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-amber leading-none">43.8</span>
+<span class="font-label-sm text-label-sm text-text-muted">/ 150 NVL</span>
+</div>
+<span class="font-label-sm text-label-sm text-cyan mt-1">Acto II: El Reino de las Clases</span>
+</div>
+<div class="h-0.5 w-full bg-surface-3 mt-space-sm overflow-hidden">
+<div class="h-full bg-gradient-to-r from-amber to-cyan" style="width: 43.8%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 02. ANALYTIC COCKPIT: MASTERY MATRIX & AI DIAGNOSTIC -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- CONCEPT MASTERY RADAR & PROGRESSION (8 COLS) -->
+<div class="lg:col-span-8 flex flex-col bg-surface-1 rounded p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-4 bg-cyan rounded-sm"></span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-text-hi">Dominio Curricular por Concepto Java</h2>
+</div>
+<span class="font-label-sm text-label-sm text-text-disabled">DATA SINK // JRE 21.0.4 TEST HARNESS</span>
+</div>
+<!-- BARS MATRIX -->
+<div class="flex flex-col gap-space-md mt-space-sm">
+<!-- Skill 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-cyan">M-01</span>
+<span>Sintaxis Básica, Tipos Primitivos y Operadores</span>
+</span>
+<span class="font-bold text-green font-mono">96.0% DOMINADO</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-green rounded-sm" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-cyan">M-02</span>
+<span>Estructuras de Control y Bucles (for, while, switch)</span>
+</span>
+<span class="font-bold text-green font-mono">88.4% DOMINADO</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-green rounded-sm" style="width: 88.4%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-cyan">M-03</span>
+<span>Arreglos Unidimensionales y Matrices 2D</span>
+</span>
+<span class="font-bold text-amber font-mono">79.1% EN PROGRESO</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-amber rounded-sm" style="width: 79.1%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-cyan">M-04</span>
+<span>Clases, Objetos, Encapsulamiento y Métodos</span>
+</span>
+<span class="font-bold text-amber font-mono">62.5% OBSERVACIÓN</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-amber rounded-sm" style="width: 62.5%;"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-violet">M-05</span>
+<span>Herencia, Polimorfismo e Interfaces</span>
+</span>
+<span class="font-bold text-red font-mono">41.2% CRÍTICO</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-red rounded-sm" style="width: 41.2%;"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-hi flex items-center gap-2">
+<span class="font-mono text-violet">M-06</span>
+<span>Manejo de Excepciones y Try-With-Resources</span>
+</span>
+<span class="font-bold text-red font-mono">28.0% NO INICIADO</span>
+</div>
+<div class="h-2.5 bg-surface-2 rounded-sm overflow-hidden flex">
+<div class="h-full bg-red/60 rounded-sm" style="width: 28%;"></div>
+</div>
+</div>
+</div>
+<!-- TELEMETRY FOOTNOTE -->
+<div class="mt-space-lg pt-space-sm bg-surface-2/60 p-space-sm rounded flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-cyan text-[18px]">verified</span>
+<span>Basado en 14.820 ejecuciones de pruebas unitarias automatizadas (JUnit 5).</span>
+</div>
+<span class="font-label-sm text-label-sm text-cyan">LATENCIA RECOPILACIÓN: 0.4s</span>
+</div>
+</div>
+<!-- AI EARLY-WARNING & DIAGNOSTIC INTELLIGENCE (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col justify-between bg-surface-1 rounded p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-red/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-red font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[18px] animate-bounce">warning</span>
+<span>ALERTA TEMPRANA PEDAGÓGICA (IA)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-3 text-text-muted font-label-sm text-[10px]">DIAG-902</span>
+</div>
+<div class="p-space-md rounded bg-surface-2 flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-red">32.1%</span>
+<span class="font-label-sm text-label-sm text-text-muted">27 Alumnos afectados</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-hi leading-relaxed">
+              Falla recurrente detectada en <strong class="text-cyan font-mono">Bucles for anidados con matrices 2D (Nivel 47)</strong>. 
+              El 78% de los errores corresponden a desbordamiento de índices (<span class="font-mono text-red">ArrayIndexOutOfBoundsException</span>) durante el recorrido de filas y columnas.
+            </p>
+</div>
+<!-- RECOMMENDED ACTIONS ACCORDION -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// ACCIONES SUGERIDAS POR SISTEMA:</span>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan text-[18px]">auto_fix_high</span>
+<span class="font-body-sm text-body-sm text-text-hi">Generar micro-taller remedial (5 min)</span>
+</div>
+<button class="px-2 py-1 rounded bg-cyan text-bg-void font-label-sm text-[11px] font-bold hover:brightness-110">APLICAR</button>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber text-[18px]">notifications_active</span>
+<span class="font-body-sm text-body-sm text-text-hi">Notificar a estudiantes rezagados</span>
+</div>
+<button class="px-2 py-1 rounded bg-surface-3 text-text-hi font-label-sm text-[11px] hover:bg-surface-bright">ENVIAR</button>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>MODELO: UDP-PEDAGOGY-V3</span>
+<span class="text-green">CONFIANZA 94%</span>
+</div>
+</div>
+</section>
+<!-- 03. STUDENT COHORT TRACKING & ADVANCED DATATABLE -->
+<section class="flex flex-col bg-surface-1 rounded p-space-md shadow-sm gap-space-md">
+<!-- TABLE HEADER & DENSE FILTERS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-4 bg-violet rounded-sm"></span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-hi">Seguimiento Individual de Estudiantes</h3>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Registro activo con telemetría de código y avance en El Camino</span>
+</div>
+<!-- INTERACTIVE FILTERS CONTROLS -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- SEARCH FIELD -->
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-text-disabled text-[18px]">search</span>
+<input class="w-full bg-surface-2 text-text-hi pl-9 pr-3 py-1.5 rounded font-body-sm text-body-sm placeholder:text-text-disabled focus:outline-none focus:bg-surface-3 transition-colors shadow-inner" placeholder="Buscar por Nombre, RUT o Discord..." type="text"/>
+</div>
+<!-- SECTIONS FILTER BUTTONS -->
+<div class="flex rounded bg-surface-2 p-0.5 shadow-inner">
+<button class="px-2.5 py-1 rounded bg-cyan text-bg-void font-label-sm text-label-sm font-bold">TODAS</button>
+<button class="px-2.5 py-1 rounded text-text-muted hover:text-text-hi font-label-sm text-label-sm">SEC 01 (42)</button>
+<button class="px-2.5 py-1 rounded text-text-muted hover:text-text-hi font-label-sm text-label-sm">SEC 02 (42)</button>
+</div>
+<!-- STATUS SELECT -->
+<select class="bg-surface-2 text-text-hi px-3 py-1.5 rounded font-label-sm text-label-sm focus:outline-none cursor-pointer">
+<option>ESTADO: TODOS LOS ALUMNOS</option>
+<option>DESTACADOS (LVL &gt; 50)</option>
+<option>AL DÍA (RITMO NORMAL)</option>
+<option>EN RIESGO PEDAGÓGICO</option>
+</select>
+<!-- EXPORT DOSSIER -->
+<button class="p-1.5 rounded bg-surface-2 hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Exportar CSV de Cohorte">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- RIGOROUS ACADEMIC TABLE -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-2 text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md">ESTUDIANTE / IDENTIFICACIÓN UDP</th>
+<th class="py-2.5 px-space-sm text-center">NIVEL CAMINO</th>
+<th class="py-2.5 px-space-sm text-right">XP ACUMULADA</th>
+<th class="py-2.5 px-space-sm text-center">RACHA</th>
+<th class="py-2.5 px-space-sm text-center">EJERCICIOS</th>
+<th class="py-2.5 px-space-sm text-center">ESTADO PEDAGÓGICO</th>
+<th class="py-2.5 px-space-sm">ÚLTIMO COMMITT / ACTIVIDAD</th>
+<th class="py-2.5 px-space-md text-right">ACCIONES</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-2/40">
+<!-- ROW 1: DESTACADO -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-cyan/20 flex items-center justify-center text-cyan font-bold font-mono text-label-sm">
+                    VI
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-text-hi group-hover:text-cyan transition-colors">Valentina Ignacia Soto</span>
+<span class="font-label-sm text-label-sm text-text-disabled">RUT: 21.392.401-4 • Sec. 01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-violet/20 text-violet font-label-sm text-label-sm font-bold">LVL-58</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-sm text-label-sm text-amber font-mono font-bold">
+                14.250 XP
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-amber font-mono">🔥 14D</span>
+</td>
+<td class="py-3 px-space-sm text-center font-label-sm text-label-sm text-text-hi font-mono">
+                152 / 156
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-green/20 text-green font-label-sm text-label-sm font-bold">DESTACADO</span>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-text-muted">
+<span class="text-text-hi">Hace 12 min</span>
+<span class="text-[10px] block text-text-disabled">Lab04_Herencia.java [PASS]</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Inspeccionar Código">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-amber transition-colors" title="Ver Historial Telemetría">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: AL DÍA -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-3 flex items-center justify-center text-text-hi font-bold font-mono text-label-sm">
+                    DP
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-text-hi group-hover:text-cyan transition-colors">Diego Puebla Montero</span>
+<span class="font-label-sm text-label-sm text-text-disabled">RUT: 20.884.103-K • Sec. 02</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-2 text-cyan font-label-sm text-label-sm font-bold">LVL-47</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-sm text-label-sm text-amber font-mono font-bold">
+                11.820 XP
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-amber font-mono">🔥 6D</span>
+</td>
+<td class="py-3 px-space-sm text-center font-label-sm text-label-sm text-text-hi font-mono">
+                128 / 156
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-cyan/20 text-cyan font-label-sm text-label-sm font-bold">AL DÍA</span>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-text-muted">
+<span class="text-text-hi">Hace 2 horas</span>
+<span class="text-[10px] block text-text-disabled">MatrizTranspuesta.java</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Inspeccionar Código">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-amber transition-colors" title="Ver Historial Telemetría">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: EN RIESGO PEDAGÓGICO -->
+<tr class="bg-red/5 hover:bg-red/10 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-red/20 flex items-center justify-center text-red font-bold font-mono text-label-sm">
+                    BM
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-text-hi group-hover:text-red transition-colors">Benjamín Morales Aránguiz</span>
+<span class="font-label-sm text-label-sm text-text-disabled">RUT: 21.004.992-1 • Sec. 01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-red/20 text-red font-label-sm text-label-sm font-bold">LVL-23</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-sm text-label-sm text-text-muted font-mono font-bold">
+                4.310 XP
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-text-disabled font-mono">0D (Rota)</span>
+</td>
+<td class="py-3 px-space-sm text-center font-label-sm text-label-sm text-red font-mono">
+                44 / 156
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-red text-bg-void font-label-sm text-label-sm font-bold animate-pulse">RIESGO CRÍTICO</span>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-text-muted">
+<span class="text-red">Hace 5 días</span>
+<span class="text-[10px] block text-text-disabled">3 fallos consecutivos en Loop2D</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-red text-bg-void font-label-sm text-[11px] font-bold hover:brightness-110 flex items-center gap-1 shadow-sm" title="Disparar Taller Remedial con IA">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>REFUERZO IA</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Inspeccionar Código">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: AL DÍA -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-3 flex items-center justify-center text-text-hi font-bold font-mono text-label-sm">
+                    CA
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-text-hi group-hover:text-cyan transition-colors">Camila Alarcón Fuenzalida</span>
+<span class="font-label-sm text-label-sm text-text-disabled">RUT: 21.218.730-8 • Sec. 02</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-2 text-cyan font-label-sm text-label-sm font-bold">LVL-49</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-sm text-label-sm text-amber font-mono font-bold">
+                12.400 XP
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-amber font-mono">🔥 8D</span>
+</td>
+<td class="py-3 px-space-sm text-center font-label-sm text-label-sm text-text-hi font-mono">
+                134 / 156
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-cyan/20 text-cyan font-label-sm text-label-sm font-bold">AL DÍA</span>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-text-muted">
+<span class="text-text-hi">Ayer 22:40</span>
+<span class="text-[10px] block text-text-disabled">PolimorfismoFiguras.java</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Inspeccionar Código">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-amber transition-colors" title="Ver Historial Telemetría">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: EN RIESGO -->
+<tr class="bg-red/5 hover:bg-red/10 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-red/20 flex items-center justify-center text-red font-bold font-mono text-label-sm">
+                    MR
+                  </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-text-hi group-hover:text-red transition-colors">Matías Reyes Cárdenas</span>
+<span class="font-label-sm text-label-sm text-text-disabled">RUT: 20.912.304-5 • Sec. 01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-red/20 text-red font-label-sm text-label-sm font-bold">LVL-31</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-sm text-label-sm text-text-muted font-mono font-bold">
+                7.190 XP
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-text-disabled font-mono">1D</span>
+</td>
+<td class="py-3 px-space-sm text-center font-label-sm text-label-sm text-red font-mono">
+                79 / 156
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-amber/20 text-amber font-label-sm text-label-sm font-bold">EN OBSERVACIÓN</span>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-text-muted">
+<span class="text-text-hi">Hace 3 días</span>
+<span class="text-[10px] block text-text-disabled">CuentaBancaria.java</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-3 text-cyan font-label-sm text-[11px] font-bold hover:bg-surface-bright flex items-center gap-1 shadow-sm" title="Enviar Ejercicio Adaptativo">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>TUTOR IA</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-3 text-text-muted hover:text-cyan transition-colors" title="Inspeccionar Código">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- PAGINATION AND BULK ACTIONS -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-text-muted font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span>MOSTRANDO 5 DE 84 ESTUDIANTES</span>
+<span class="w-1 h-1 rounded-full bg-text-disabled"></span>
+<span class="text-cyan cursor-pointer hover:underline">Ver vista compacta expandida</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-2 text-text-disabled cursor-not-allowed">ANTERIOR</button>
+<button class="px-2.5 py-1 rounded bg-cyan text-bg-void font-bold">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-2 hover:bg-surface-3 text-text-hi">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-2 hover:bg-surface-3 text-text-hi">3</button>
+<span class="px-1">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-2 hover:bg-surface-3 text-text-hi">17</button>
+<button class="px-2.5 py-1 rounded bg-surface-2 hover:bg-surface-3 text-text-hi">SIGUIENTE</button>
+</div>
+</div>
+</section>
+<!-- 04. ASSESSMENTS HUD, LAB SESSIONS & INTEGRITY AUDIT -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- ACTIVE EVALUATION DELIVERIES & LAB TRACK (7 COLS) -->
+<div class="lg:col-span-7 flex flex-col bg-surface-1 rounded p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-4 bg-amber rounded-sm"></span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-hi">Evaluaciones en Curso &amp; Entregas</h3>
+</div>
+<span class="font-label-sm text-label-sm text-amber font-mono">SEMANA 9 / 18</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- EVAL CARD 1 -->
+<div class="p-space-md rounded bg-surface-2 flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-violet font-bold font-mono">EVAL-03</span>
+<span class="font-body-md text-body-md font-bold text-text-hi">Checkpoint 9: Polimorfismo e Interfaces</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted mt-0.5">Vence hoy a las 23:59 hrs • Ponderación 15%</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-green/20 text-green font-label-sm text-label-sm font-bold font-mono">
+                71/84 ENTREGADOS
+              </span>
+</div>
+<div class="w-full bg-surface-3 h-2 rounded overflow-hidden mt-space-xs flex">
+<div class="h-full bg-green" style="width: 84.5%;" title="Entregados y validados"></div>
+<div class="h-full bg-amber" style="width: 7%;" title="Borrador"></div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-text-muted">
+<span>TASA APROBACIÓN TESTS: 81.2%</span>
+<span class="text-cyan cursor-pointer hover:underline">Revisar matriz de aserciones →</span>
+</div>
+</div>
+<!-- EVAL CARD 2 -->
+<div class="p-space-md rounded bg-surface-2 flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-cyan font-bold font-mono">LAB-04</span>
+<span class="font-body-md text-body-md font-bold text-text-hi">Taller Práctico: Sistema Bancario con Excepciones</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted mt-0.5">Programado para Jueves 14 • Laboratorio L-204</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-3 text-cyan font-label-sm text-label-sm font-bold font-mono">
+                PRE-RELEASE
+              </span>
+</div>
+<div class="w-full bg-surface-3 h-2 rounded overflow-hidden mt-space-xs">
+<div class="h-full bg-cyan" style="width: 32%;"></div>
+</div>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-text-muted">
+<span>18 CASOS DE PRUEBA CONFIGURADOS</span>
+<span class="text-cyan cursor-pointer hover:underline">Editar casos de borde →</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ACADEMIC INTEGRITY & CODE SIMILARITY AUDIT (5 COLS) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-1 rounded p-space-md shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-4 bg-green rounded-sm"></span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-hi">Auditoría de Integridad y Plagio</h3>
+</div>
+<span class="material-symbols-outlined text-green text-[20px]">security</span>
+</div>
+<!-- SIMILARITY GAUGE TILE -->
+<div class="p-space-md rounded bg-surface-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">ÍNDICE MEDIO DE SIMILITUD DE AST</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-green leading-none">4.2%</span>
+<span class="font-label-sm text-label-sm text-green font-bold">[ RANGO SEGURO ]</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+                Motor Moss UDP: Análisis de árboles de sintaxis abstracta en 168 archivos Java.
+              </p>
+</div>
+<div class="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center text-green">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<!-- DETECTED CLUSTERS -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">// CASOS BAJO REVISIÓN HEURÍSTICA:</span>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-amber"></span>
+<span class="font-body-sm text-body-sm text-text-hi">Similitud de lógica (21%): Grupo 04 vs Grupo 11</span>
+</div>
+<button class="font-label-sm text-label-sm text-cyan hover:underline">INSPECCIONAR AST</button>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green"></span>
+<span class="font-body-sm text-body-sm text-text-hi">Uso legítimo de patrones boilerplate</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-disabled">DESESTIMADO</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>ALGORITMO: ANTLR4 + JAVAPARSER AST</span>
+<span class="text-text-hi font-mono">HASH: 9a2f-e8</span>
+</div>
+</div>
+</section>
+<!-- 05. TEST FAILURE RADAR & AUTO-REMEDIAL TRIGGER -->
+<section class="bg-surface-1 rounded p-space-md shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-cyan/10 flex items-center justify-center text-cyan flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-cyan font-bold uppercase tracking-wider">// GENERADOR DE EJERCICIOS ADAPTATIVOS</span>
+<span class="font-headline-sm text-headline-sm font-bold text-text-hi">¿Deseas generar una ronda de práctica de refuerzo para la sección 01?</span>
+<p class="font-body-sm text-body-sm text-text-muted">
+            La IA estructurará 3 problemas graduales sobre bucles anidados con tests unitarios JUnit 5 listos para deploy en 'El Camino'.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-2 rounded bg-surface-2 hover:bg-surface-3 text-text-muted hover:text-text-hi font-label-sm text-label-sm transition-colors">
+          IGNORAR POR AHORA
+        </button>
+<button class="px-space-lg py-2 rounded bg-cyan text-bg-void font-label-sm text-label-sm font-bold hover:brightness-110 flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>COMPILAR RUTA REMEDIAL</span>
+</button>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

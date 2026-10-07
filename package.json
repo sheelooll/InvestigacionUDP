@@ -1,0 +1,10 @@
+{
+  "name": "investigacion-udp",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix codequest-app start",
+    "dev": "npm --prefix codequest-app run dev",
+    "build": "npm --prefix codequest-app run build",
+    "reset-db": "npm --prefix codequest-app run reset-db"
+  }
+}

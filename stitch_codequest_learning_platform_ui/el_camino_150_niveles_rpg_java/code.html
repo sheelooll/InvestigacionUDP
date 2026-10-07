@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>CODEQUEST UDP // Java Learning Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=JetBrains+Mono:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"amber":"#FFB547","bg-void":"#070A12","on-surface":"#dee1f9","surface-dim":"#0e1323","surface-variant":"#2f3446","primary-fixed-dim":"#2fd9f4","background":"#0e1323","on-background":"#dee1f9","primary":"#8aebff","surface-container-low":"#161b2b","red":"#FF5D73","green":"#3DDC97","border":"#2A3561","inverse-on-surface":"#2b3041","surface-container-lowest":"#080d1d","on-primary-fixed-variant":"#004e5a","surface-container":"#1a1f30","on-secondary-fixed-variant":"#4f319c","tertiary":"#ffd6a2","on-primary-container":"#005763","tertiary-fixed":"#ffddb4","border-strong":"#3B4A80","on-secondary-fixed":"#21005e","violet":"#A78BFA","surface-tint":"#2fd9f4","on-tertiary":"#452b00","tertiary-container":"#fcb244","surface-2":"#18213F","surface":"#0e1323","on-primary":"#00363e","surface-3":"#222D52","cyan":"#22D3EE","primary-fixed":"#a2eeff","on-tertiary-container":"#6e4600","on-error-container":"#ffdad6","surface-1":"#111831","secondary-fixed-dim":"#cebdff","secondary-fixed":"#e8ddff","on-primary-fixed":"#001f25","surface-bright":"#34394a","on-tertiary-fixed":"#291800","tertiary-fixed-dim":"#ffb955","surface-container-highest":"#2f3446","inverse-surface":"#dee1f9","text-muted":"#8C95B8","secondary-container":"#4f319c","on-secondary":"#381385","outline":"#859397","text-body":"#C7CEE8","bg-base":"#0B1020","on-secondary-container":"#bea8ff","on-surface-variant":"#bbc9cd","inverse-primary":"#006877","outline-variant":"#3c494c","java":"#F89820","primary-container":"#22d3ee","surface-container-high":"#25293a","on-error":"#690005","text-hi":"#EEF2FF","error-container":"#93000a","error":"#ffb4ab","text-disabled":"#566089","secondary":"#cebdff","on-tertiary-fixed-variant":"#633f00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-md":"1.5rem","space-xl":"2.5rem","space-md":"1rem","margin":"1rem","gutter":"1rem","margin-md":"2rem"},fontFamily:{"label-md":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"code-body":["JetBrains Mono"],"body-lg":["IBM Plex Sans"],"headline-xl":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["IBM Plex Sans"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["IBM Plex Sans"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"code-body":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-bg-void font-body-md text-text-body antialiased selection:bg-cyan selection:text-bg-void"><aside class="fixed left-0 top-0 h-full w-72 bg-bg-base z-50 flex flex-col justify-between border-r border-border shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border bg-surface-1/50"><div class="w-8 h-8 rounded bg-surface-2 border border-border-strong flex items-center justify-center"><span class="material-symbols-outlined text-cyan text-[18px]">terminal</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-hi leading-none">CODEQUEST</span><span class="px-1 py-0.5 rounded bg-surface-3 border border-border text-[9px] font-label-sm text-cyan leading-none">UDP</span></div><span class="font-label-sm text-[9px] text-text-muted tracking-wider truncate uppercase mt-0.5">Facultad de Ingeniería</span></div></div><div class="p-space-md border-b border-border bg-surface-1/20"><div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5"><span>// MODO ACTUAL</span><span class="flex items-center gap-1 text-green text-[10px]"><span class="w-1.5 h-1.5 rounded-full bg-green animate-pulse"></span>ONLINE</span></div><div class="grid grid-cols-2 gap-1 p-1 bg-surface-2 rounded border border-border"><button class="py-1 px-2 rounded bg-cyan text-bg-void font-label-sm text-label-sm font-bold text-center tracking-wide">ESTUDIANTE</button><button class="py-1 px-2 rounded text-text-muted hover:text-text-hi font-label-sm text-label-sm text-center tracking-wide transition-colors">DOCENTE</button></div></div><nav class="flex flex-col py-space-sm gap-0.5" data-active-classes="bg-surface-2 text-cyan font-bold border-l-2 border-cyan"><div class="px-space-md pt-space-xs pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 01 RUTA FORMATIVA</div><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">HUD-01</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 transition-all bg-surface-2 text-cyan font-bold border-l-2 border-cyan" data-path="el-camino" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">route</span><span>El Camino</span></div><span class="px-1.5 py-0.5 rounded bg-violet/20 border border-violet/50 text-violet font-label-sm text-[9px] tracking-wide">ACTO II</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="practica-libre" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">code_blocks</span><span>Práctica Libre</span></div><span class="font-label-sm text-[9px] text-cyan tracking-tighter">IDE</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="logros-y-rangos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">military_tech</span><span>Logros &amp; Rangos</span></div><span class="font-label-sm text-[9px] text-amber tracking-tighter">XP</span></a><div class="px-space-md pt-space-md pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 02 GESTIÓN DOCENTE</div><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="panel-docente" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">team_dashboard</span><span>Panel Docente</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">ADM</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="generador-ia" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">psychology</span><span>Generador IA</span></div><span class="px-1.5 py-0.5 rounded bg-cyan/20 border border-cyan/60 text-cyan font-label-sm text-[9px] tracking-wide">NUEVO</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="banco-ejercicios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dataset</span><span>Banco Ejercicios</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">JAVA</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="rubricas-analitica" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">query_stats</span><span>Rúbricas &amp; Analítica</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">MET</span></a></nav></div><div class="p-space-md border-t border-border bg-surface-1/40 flex flex-col gap-2"><a class="flex items-center justify-between text-on-surface-variant hover:text-cyan text-body-sm font-body-sm transition-colors" data-path="documentacion-tecnica" href="#"><span>Documentación Técnica</span><span class="material-symbols-outlined text-[16px]">open_in_new</span></a><div class="flex items-center justify-between pt-1 border-t border-border/50"><span class="font-label-sm text-[10px] text-text-disabled">v2.4.0-udp</span><span class="font-label-sm text-[10px] text-cyan">// Java 21 LTS</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-bg-base/95 backdrop-blur-md border-b border-border z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="font-label-sm text-[11px] text-text-muted">NODO:</span><span class="font-label-sm text-label-sm text-cyan px-2 py-0.5 rounded bg-surface-2 border border-border">SRV-UDP-SCL01</span></div><div class="h-4 w-px bg-border"></div><div class="flex items-center gap-1.5 text-text-muted font-label-sm text-[11px]"><span class="w-2 h-2 rounded-full bg-green shadow-[0_0_8px_#3DDC97]"></span><span>RED UDP CONECTADA</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-1 border border-border"><div class="flex flex-col"><div class="flex items-center justify-between gap-space-md text-[10px] font-label-sm"><span class="text-cyan font-bold">NVL 47/150</span><span class="text-amber font-mono">2.340 / 3.000 XP</span></div><div class="w-36 h-1.5 bg-surface-3 rounded-full mt-1 overflow-hidden"><div class="h-full bg-amber shadow-[0_0_12px_#FFB547]" style="width: 78%;"></div></div></div><div class="h-6 w-px bg-border"></div><div class="flex items-center gap-1 px-1 text-amber font-label-sm text-label-sm" title="Racha de estudio activa"><span class="text-base leading-none">🔥</span><span class="font-bold">6D</span></div></div><div class="flex items-center gap-2"><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-cyan hover:border-cyan transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cyan shadow-[0_0_6px_#22D3EE]"></span></button><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-amber hover:border-amber transition-colors"><span class="material-symbols-outlined text-[18px]">emoji_events</span></button><div class="flex items-center gap-2 pl-2 border-l border-border"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-[11px] text-text-hi font-bold leading-tight">est.diego.p</span><span class="font-label-sm text-[9px] text-text-muted leading-none">UDP INF-302</span></div></div></div></div></header><main class="relative pt-16 min-h-screen bg-bg-base"><div class="flex flex-col w-full text-text-body font-body-md selection:bg-cyan selection:text-bg-void">
+<!-- HUD SUPERIOR FIJO (STICKY CANOPY) -->
+<header class="sticky top-16 z-30 w-full px-space-md py-space-sm bg-surface-1/90 backdrop-blur-md shadow-lg [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))]">
+<div class="max-w-7xl mx-auto flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Identidad de Estudiante & Metas -->
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<div class="w-12 h-12 bg-surface-3 flex items-center justify-center [clip-path:polygon(8px_0,100%_0,100%_calc(100%-8px),calc(100%-8px)_100%,0_100%,0_8px)]">
+<span class="material-symbols-outlined text-cyan text-[28px]">terminal</span>
+</div>
+<span class="absolute -bottom-1 -right-1 px-1 py-0.2 bg-cyan text-bg-void font-label-sm text-label-sm font-bold">47</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-hi leading-none">Alex M.</span>
+<span class="px-1.5 py-0.5 bg-surface-2 text-cyan font-label-sm text-label-sm uppercase tracking-wider">INF-UDP 2025</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-label-sm text-label-sm text-amber font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">military_tech</span>
+              RANGO: COMPILADOR NEÓFITO
+            </span>
+<span class="text-text-disabled font-label-sm text-label-sm">·</span>
+<span class="font-label-sm text-label-sm text-text-muted">LVL-047 / 150</span>
+</div>
+</div>
+</div>
+<!-- Barra de XP & Racha -->
+<div class="flex items-center gap-space-lg flex-1 max-w-md">
+<div class="flex flex-col w-full">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-text-muted">// EXPERIENCIA SINTÁCTICA</span>
+<span class="text-amber font-mono font-bold">2.340 / 3.000 XP</span>
+</div>
+<div class="w-full h-2 bg-surface-container-lowest overflow-hidden flex items-center p-0.5">
+<div class="h-full bg-amber shadow-[0_0_12px_#FFB547] transition-all duration-500" style="width: 78%;"></div>
+</div>
+<div class="flex items-center justify-between text-text-disabled font-label-sm text-[9px] mt-0.5">
+<span>SIGUIENTE: OPERADOR TERNARIO</span>
+<span>RESTAN: 660 XP</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center px-space-md py-1 bg-surface-2 shadow-sm min-w-max">
+<div class="flex items-center gap-1 text-amber">
+<span class="text-headline-sm leading-none">🔥</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">6</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">DÍAS RACHA</span>
+</div>
+</div>
+<!-- Progreso Campaña & Acción Rápida -->
+<div class="flex items-center gap-space-md justify-between xl:justify-end">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-text-muted">// CAMPAÑA ACTIVA</span>
+<span class="font-label-lg text-label-lg text-text-hi font-bold text-cyan">ACTO II · 21/25</span>
+</div>
+<button class="px-space-md py-space-sm bg-cyan text-bg-void font-label-md text-label-md font-bold flex items-center gap-2 hover:shadow-[0_0_24px_rgba(34,211,238,0.5)] transition-all [clip-path:polygon(0_0,calc(100%-8px)_0,100%_8px,100%_100%,8px_100%,0_calc(100%-8px))] cursor-pointer" onclick="document.getElementById('node-active-47').scrollIntoView({behavior:'smooth', block:'center'})">
+<span>CONTINUAR → NIVEL 47</span>
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Filtro de Navegación Rápida entre Actos -->
+<div class="max-w-7xl mx-auto mt-space-sm pt-space-xs flex items-center gap-space-xs overflow-x-auto">
+<span class="font-label-sm text-label-sm text-text-disabled uppercase mr-2 min-w-max">// FILTRAR SECTOR:</span>
+<button class="px-space-sm py-0.5 bg-surface-2 text-cyan font-label-sm text-label-sm hover:bg-surface-3 transition-colors">ACTO I [1-25]</button>
+<button class="px-space-sm py-0.5 bg-cyan text-bg-void font-label-sm text-label-sm font-bold shadow-[0_0_8px_rgba(34,211,238,0.3)]">ACTO II [26-50] ★</button>
+<button class="px-space-sm py-0.5 bg-surface-2 text-text-muted hover:text-text-hi font-label-sm text-label-sm transition-colors">ACTO III [51-75]</button>
+<button class="px-space-sm py-0.5 bg-surface-2 text-text-muted hover:text-text-hi font-label-sm text-label-sm transition-colors">ACTO IV [76-100]</button>
+<button class="px-space-sm py-0.5 bg-surface-2 text-text-muted hover:text-text-hi font-label-sm text-label-sm transition-colors">ACTO V [101-125]</button>
+<button class="px-space-sm py-0.5 bg-surface-2 text-text-muted hover:text-text-hi font-label-sm text-label-sm transition-colors">ACTO VI [126-150]</button>
+</div>
+</header>
+<!-- CONTENEDOR PRINCIPAL: LIENZO RPG Y RADAR MINIMAP DERECHO -->
+<div class="relative w-full flex justify-center bg-bg-void overflow-hidden">
+<!-- Rejilla y textura matricial de fondo sutil -->
+<div class="absolute inset-0 bg-[radial-gradient(#2A3561_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan/5 to-transparent pointer-events-none"></div>
+<!-- ==================== RADAR MINIMAP DESKTOP DOCK (STICKY LATERAL) ==================== -->
+<aside class="hidden xl:flex fixed right-6 top-44 z-20 w-56 flex-col bg-surface-1/90 backdrop-blur-md p-space-sm shadow-xl [clip-path:polygon(0_0,calc(100%-12px)_0,100%_12px,100%_100%,12px_100%,0_calc(100%-12px))]">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted">// TELEMETRÍA GLOBAL</span>
+<span class="font-label-sm text-label-sm text-cyan font-mono font-bold">31.3%</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-text-hi font-bold leading-tight">ACTO II</div>
+<div class="font-label-sm text-label-sm text-green flex items-center gap-1 mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-green animate-ping"></span>
+<span>EN CURSO: LVL-047</span>
+</div>
+<!-- Barra de 150 marcas segmentadas del minimapa -->
+<div class="relative w-full h-80 bg-surface-container-lowest p-1 flex flex-col justify-between overflow-hidden">
+<!-- 6 Bloques de actos en minimapa -->
+<div class="flex-1 w-full bg-cyan/40 hover:bg-cyan/60 transition-colors relative mb-0.5" title="Acto I: Completado 100%">
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-cyan">I (25)</span>
+</div>
+<div class="flex-1 w-full bg-surface-2 relative mb-0.5 flex flex-col justify-end" title="Acto II: En Curso (21/25)">
+<!-- Tramo completado de Acto II -->
+<div class="w-full bg-cyan h-[84%] relative">
+<!-- Pin actual Nivel 47 -->
+<div class="absolute -top-1 left-0 right-0 h-1 bg-amber shadow-[0_0_8px_#FFB547] animate-pulse"></div>
+</div>
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-amber font-bold">II (47)</span>
+</div>
+<div class="flex-1 w-full bg-surface-container/40 relative mb-0.5" title="Acto III: Bloqueado">
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-text-disabled">III</span>
+</div>
+<div class="flex-1 w-full bg-surface-container/40 relative mb-0.5" title="Acto IV: Bloqueado">
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-text-disabled">IV</span>
+</div>
+<div class="flex-1 w-full bg-surface-container/40 relative mb-0.5" title="Acto V: Bloqueado">
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-text-disabled">V</span>
+</div>
+<div class="flex-1 w-full bg-surface-container/20 relative" title="Acto VI: Jefe Final Bloqueado">
+<span class="absolute right-1 top-0.5 text-[8px] font-label-sm text-violet">VI 💀</span>
+</div>
+</div>
+<!-- Leyenda de colores del minimap -->
+<div class="grid grid-cols-2 gap-1 mt-space-sm pt-space-xs font-label-sm text-[9px] text-text-muted">
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 bg-green"></span> Superado</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 bg-cyan"></span> Actual</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 bg-violet"></span> Jefe/Examen</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 bg-surface-variant"></span> Inactivo</div>
+</div>
+</aside>
+<!-- ==================== ÁREA DE RECORRIDO DEL MAPA CENTRAL ==================== -->
+<div class="relative w-full max-w-4xl py-space-xl flex flex-col items-center">
+<!-- BANNER DE ACTO I (RESUMEN COMPLETADO) -->
+<div class="w-full max-w-2xl px-space-md py-space-sm mb-space-xl bg-surface-1/60 shadow-md [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))]">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-cyan font-bold tracking-widest">// ARCHIVO HISTÓRICO · ACTO I</span>
+<h2 class="font-headline-md text-headline-md text-text-hi font-bold">LA CONSOLA INICIAL</h2>
+<p class="font-body-sm text-body-sm text-text-muted">Niveles 1 al 25 · Tipos primitivos, variables, stdin/stdout y operadores aritméticos.</p>
+</div>
+<div class="text-right">
+<span class="px-space-sm py-1 bg-green/10 text-green font-label-md text-label-md font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              100% COMPLETADO
+            </span>
+<span class="font-label-sm text-[10px] text-amber font-mono mt-1 block">75/75 ESTRELLAS</span>
+</div>
+</div>
+</div>
+<!-- BANNER TRANSICIONAL: ACTO II (ACTUAL EN CURSO) -->
+<div class="relative w-full max-w-2xl px-space-lg py-space-md mb-space-xl bg-gradient-to-r from-surface-2 via-surface-1 to-surface-2 shadow-2xl [clip-path:polygon(0_0,calc(100%-20px)_0,100%_20px,100%_100%,20px_100%,0_calc(100%-20px))]">
+<div class="absolute -top-3 left-6 px-2 py-0.5 bg-green text-bg-void font-label-sm text-label-sm font-bold uppercase tracking-widest">
+          ZONA DE COMBATE ACTIVA
+        </div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-green">
+<span>// PROTOCOLO 02</span>
+<span>·</span>
+<span>ESTRUCTURAS DE DECISIÓN &amp; ITERACIÓN</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-hi font-bold mt-1">BOSQUE DE BIFURCACIONES</h1>
+<p class="font-body-sm text-body-sm text-text-body mt-1 max-w-lg">
+              Misión pedagógica: Dominio de lógica de bifurcación condicional (<code class="font-code-body text-cyan font-bold">if-else</code>, <code class="font-code-body text-cyan font-bold">switch pattern matching</code>) y ciclos deterministas/indeterministas (<code class="font-code-body text-cyan font-bold">for</code>, <code class="font-code-body text-cyan font-bold">while</code>, centinelas y arrays bidimensionales).
+            </p>
+</div>
+<div class="flex flex-col items-end min-w-max">
+<span class="font-headline-md text-headline-md text-cyan font-mono font-bold">21 / 25</span>
+<span class="font-label-sm text-label-sm text-text-muted">NIVELES COMPLETADOS</span>
+<div class="w-24 h-1.5 bg-surface-container mt-1 overflow-hidden">
+<div class="h-full bg-cyan shadow-[0_0_8px_#22D3EE]" style="width: 84%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== LIENZO DE NODOS CON SVG CONTINUO ==================== -->
+<div class="relative w-full max-w-3xl min-h-[1750px] flex flex-col items-center">
+<!-- TRAZADO SVG UNIFICADO SERPENTEANTE -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 768 1750" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="pathProgressGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3DDC97"></stop>
+<stop offset="70%" stop-color="#22D3EE"></stop>
+<stop offset="100%" stop-color="#FFB547"></stop>
+</lineargradient>
+<filter height="140%" id="glowCyanFilter" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="5"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- TRAMO RECORRIDO (Niveles 40 al 47): Trazo continuo luminoso -->
+<!-- Puntos aproximados:
+               L40: (260, 80)
+               L41: (500, 200)
+               L42: (280, 320)
+               L43: (480, 440)
+               L44: (270, 560)
+               L45 (CP): (384, 690)
+               L46: (280, 830)
+               L47 (ACTUAL): (490, 970)
+          -->
+<path d="M 260 80 
+                   C 360 80, 500 130, 500 200
+                   C 500 270, 280 250, 280 320
+                   C 280 390, 480 370, 480 440
+                   C 480 510, 270 490, 270 560
+                   C 270 630, 384 620, 384 690
+                   C 384 760, 280 760, 280 830
+                   C 280 900, 490 890, 490 970" fill="none" filter="url(#glowCyanFilter)" stroke="url(#pathProgressGrad)" stroke-linecap="round" stroke-width="6"></path>
+<!-- TRAMO PENDIENTE / BLOQUEADO (Niveles 47 al 50 y hacia Acto III): Trazo punteado -->
+<!-- L47 (490, 970) -> L48 (280, 1110) -> L49 (470, 1250) -> L50 (JEFE 384, 1420) -> Acto III (384, 1680) -->
+<path d="M 490 970 
+                   C 490 1040, 280 1040, 280 1110
+                   C 280 1180, 470 1180, 470 1250
+                   C 470 1320, 384 1330, 384 1420
+                   C 384 1520, 384 1580, 384 1680" fill="none" stroke="#2A3561" stroke-dasharray="8 8" stroke-linecap="round" stroke-width="5"></path>
+</svg>
+<!-- ==================== NODOS DE NIVEL EN POSICIONES ABSOLUTAS ==================== -->
+<!-- NODO 40 (Completado) -->
+<div class="absolute top-[56px] left-[236px] flex items-center group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<!-- 3 Estrellas -->
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<!-- Tarjeta Lateral de Concepto -->
+<div class="ml-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-040 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Bucle do-while Garantizado</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Validación de entradas con Scanner</div>
+</div>
+</div>
+<!-- NODO 41 (Completado) -->
+<div class="absolute top-[176px] left-[476px] flex items-center flex-row-reverse group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="mr-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs text-right">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-041 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Interrupción: break y continue</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Salto de ciclos y optimización</div>
+</div>
+</div>
+<!-- NODO 42 (Completado) -->
+<div class="absolute top-[296px] left-[256px] flex items-center group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="ml-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-042 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Valores Centinela</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Terminación condicional por flujo stdin</div>
+</div>
+</div>
+<!-- NODO 43 (Completado) -->
+<div class="absolute top-[416px] left-[456px] flex items-center flex-row-reverse group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="mr-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs text-right">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-043 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Acumuladores y Banderas</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Manejo de estados booleanos en bucle</div>
+</div>
+</div>
+<!-- NODO 44 (Completado) -->
+<div class="absolute top-[536px] left-[246px] flex items-center group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="ml-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-044 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Bucles for Estándar</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Inicialización, paso e iteración indexada</div>
+</div>
+</div>
+<!-- ==================== NODO 45: CHECKPOINT 9 (HEXÁGONO CHAMFER) ==================== -->
+<div class="absolute top-[658px] left-[352px] -translate-x-0 flex flex-col items-center group z-10">
+<div class="relative w-16 h-16 bg-surface-3 shadow-xl flex items-center justify-center [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)] hover:scale-105 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-amber text-[32px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+</div>
+<!-- Banderín lateral flotante de evaluación checkpoint -->
+<div class="absolute left-20 -top-2 w-72 p-space-sm bg-surface-2/95 shadow-xl [clip-path:polygon(0_0,calc(100%-12px)_0,100%_12px,100%_100%,12px_100%,0_calc(100%-12px))]">
+<div class="flex items-center justify-between font-label-sm text-[10px] text-amber">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">security</span>
+                CHECKPOINT 09 // APROBADO
+              </span>
+<span class="font-mono">100/100 PTS</span>
+</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold mt-1">EVALUACIÓN INTERMEDIA II: Estructuras Cíclicas Complejas</div>
+<p class="font-body-sm text-[11px] text-text-muted mt-1 leading-snug">Examen cronometrado superado con distinción. Verificador de sintaxis en tiempo real.</p>
+<div class="mt-2 flex items-center gap-1 text-amber text-[11px]">
+<span>★ ★ ★</span>
+<span class="font-label-sm text-[10px] text-text-muted ml-2">[+250 XP OBTENIDOS]</span>
+</div>
+</div>
+</div>
+<!-- NODO 46 (Completado) -->
+<div class="absolute top-[806px] left-[256px] flex items-center group">
+<div class="relative w-12 h-12 rounded-full bg-surface-2 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-green text-[22px] font-bold">check</span>
+<div class="absolute -bottom-4 flex gap-0.5 text-amber text-[10px]">
+<span>★</span><span>★</span><span>★</span>
+</div>
+</div>
+<div class="ml-space-md p-space-sm bg-surface-1/90 shadow-md backdrop-blur-sm max-w-xs">
+<div class="font-label-sm text-label-sm text-green font-bold">LVL-046 // COMPLETADO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Introducción a Matrices</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Arreglos multidimensionales en memoria heap</div>
+</div>
+</div>
+<!-- ==================== NODO 47 (NIVEL ACTUAL - ESTÁS AQUÍ) ==================== -->
+<div class="absolute top-[940px] left-[460px] z-20 flex flex-col items-center" id="node-active-47">
+<!-- Anillo pulsante y Halo Glow cian profundo -->
+<div class="relative flex items-center justify-center">
+<div class="absolute -inset-4 rounded-full bg-cyan/20 animate-ping"></div>
+<div class="relative w-16 h-16 rounded-full bg-cyan flex items-center justify-center shadow-[0_0_32px_#22D3EE] cursor-pointer hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-bg-void text-[32px] font-bold">play_arrow</span>
+</div>
+</div>
+<!-- Puntero "ESTÁS AQUÍ" -->
+<div class="mt-2 px-space-sm py-0.5 bg-cyan text-bg-void font-label-sm text-[10px] font-bold uppercase tracking-wider [clip-path:polygon(4px_0,100%_0,calc(100%-4px)_100%,0_100%)] shadow-[0_0_12px_#22D3EE]">
+            ESTÁS AQUÍ // MISIÓN ACTIVA
+          </div>
+<!-- ==================== POPOVER / TARJETA FLOTANTE DETALLE DE MISIÓN DESPLEGADA ==================== -->
+<div class="absolute -left-96 top-0 w-88 p-space-md bg-surface-1/95 backdrop-blur-md shadow-2xl [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] animate-fade-in">
+<!-- Header de tarjeta -->
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-cyan font-bold tracking-wider">// MISIÓN PEDAGÓGICA</span>
+<span class="px-1.5 py-0.5 bg-amber/20 text-amber font-label-sm text-[10px] font-bold">+120 XP</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-hi font-bold leading-tight">LVL-047: Bucle For Anidado y Matrices Lógicas</h3>
+<!-- Tags sintácticos -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2 py-0.5 bg-surface-2 text-cyan font-label-sm text-label-sm">[Control de Flujo]</span>
+<span class="px-2 py-0.5 bg-surface-2 text-text-body font-label-sm text-label-sm">[Bucles Anidados]</span>
+<span class="px-2 py-0.5 bg-surface-2 text-violet font-label-sm text-label-sm">[Java 21 LTS]</span>
+</div>
+<!-- Metadatos de ingeniería -->
+<div class="grid grid-cols-2 gap-2 p-space-sm bg-surface-container-lowest my-space-sm text-body-sm">
+<div>
+<span class="font-label-sm text-[10px] text-text-muted block">DIFICULTAD</span>
+<span class="text-amber font-label-sm text-label-sm font-bold">NIVEL 3/5 · MEDIO</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-text-muted block">TIEMPO ESTIMADO</span>
+<span class="text-text-hi font-label-sm text-label-sm font-bold">⏱ 25 MIN</span>
+</div>
+</div>
+<!-- Descripción de la tarea -->
+<p class="font-body-sm text-body-sm text-text-body mt-2 leading-relaxed">
+<strong class="text-text-hi">Objetivo de Ingeniería:</strong> Implementar un algoritmo de rastreo bidimensional en Java para la verificación de cuadrículas de sensores telemétricos de la Facultad UDP.
+            </p>
+<!-- Recompensas desbloqueables -->
+<div class="mt-space-sm p-space-xs bg-surface-2 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-amber text-[20px]">military_tech</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted">RECOMPENSA DE DESBLOQUEO</span>
+<span class="font-label-sm text-label-sm text-text-hi font-bold">Insignia: Explorador de Matrices II</span>
+</div>
+</div>
+<!-- Botón primario Chamfer -->
+<button class="w-full mt-space-md py-space-sm bg-cyan text-bg-void font-label-md text-label-md font-bold tracking-wide flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.7)] transition-all [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,10px_100%,0_calc(100%-10px))] cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">code</span>
+<span>INICIAR MISIÓN AHORA</span>
+</button>
+</div>
+</div>
+<!-- ==================== NIVELES DISPONIBLES / PRÓXIMOS (48 Y 49) ==================== -->
+<!-- NODO 48 (Próximo) -->
+<div class="absolute top-[1086px] left-[256px] flex items-center group">
+<div class="relative w-12 h-12 rounded-full bg-surface-1 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="font-headline-sm text-headline-sm text-cyan font-mono font-bold">48</span>
+</div>
+<div class="ml-space-md p-space-sm bg-surface-1/70 shadow-sm max-w-xs">
+<div class="font-label-sm text-label-sm text-cyan font-bold">LVL-048 // PRÓXIMO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Matriz Transpuesta &amp; Diagonales</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Manipulación de índices i/j invertidos</div>
+</div>
+</div>
+<!-- NODO 49 (Próximo) -->
+<div class="absolute top-[1226px] left-[446px] flex items-center flex-row-reverse group">
+<div class="relative w-12 h-12 rounded-full bg-surface-1 flex items-center justify-center shadow-md cursor-pointer hover:scale-105 transition-transform">
+<span class="font-headline-sm text-headline-sm text-cyan font-mono font-bold">49</span>
+</div>
+<div class="mr-space-md p-space-sm bg-surface-1/70 shadow-sm max-w-xs text-right">
+<div class="font-label-sm text-label-sm text-cyan font-bold">LVL-049 // PRÓXIMO</div>
+<div class="font-body-sm text-body-sm text-text-hi font-bold">Búsqueda en Matriz Dispersa</div>
+<div class="font-label-sm text-[10px] text-text-muted mt-0.5">Complejidad temporal O(n x m)</div>
+</div>
+</div>
+<!-- ==================== NODO 50: JEFE DE ACTO II ==================== -->
+<div class="absolute top-[1376px] left-[340px] flex flex-col items-center group z-10">
+<!-- Octógono de Jefe Majestuoso 88px con glow violeta -->
+<div class="relative w-[88px] h-[88px] bg-gradient-to-br from-violet to-secondary-container shadow-[0_0_36px_rgba(167,139,250,0.45)] flex items-center justify-center [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)] hover:scale-105 transition-transform cursor-pointer">
+<div class="w-[74px] h-[74px] bg-surface-container-lowest flex items-center justify-center [clip-path:polygon(30%_0%,70%_0%,100%_30%,100%_70%,70%_100%,30%_100%,0%_70%,0%_30%)]">
+<span class="material-symbols-outlined text-violet text-[40px] animate-pulse">skull</span>
+</div>
+</div>
+<div class="mt-2 px-space-sm py-0.5 bg-violet text-bg-void font-label-sm text-[10px] font-bold tracking-widest uppercase">
+            // JEFE DE ACTO II
+          </div>
+<!-- Banner detallado del Jefe del Bosque -->
+<div class="mt-space-sm w-96 p-space-md bg-surface-1/95 shadow-2xl backdrop-blur-md [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] text-center">
+<span class="font-label-sm text-label-sm text-violet font-bold uppercase tracking-wider">// EXAMEN INTEGRADOR ACTO II · LVL-050</span>
+<h4 class="font-headline-sm text-headline-sm text-text-hi font-bold mt-1">El Algoritmo del Minotauro</h4>
+<p class="font-body-sm text-body-sm text-text-body mt-2 leading-snug">
+              Desafío de combate algorítmico contra el motor de pruebas de la Universidad. Resuelve un laberinto en matriz 10x10 usando solo sentencias de selección y ciclos con consumo de memoria acotado.
+            </p>
+<div class="flex items-center justify-center gap-space-lg my-space-sm font-label-sm text-label-sm">
+<span class="text-amber font-mono font-bold">RECOMPENSA: +500 XP</span>
+<span class="text-text-disabled">·</span>
+<span class="text-violet font-bold">RANGO COMPILADOR SENIOR</span>
+</div>
+<button class="w-full py-2 bg-surface-3 text-text-disabled font-label-md text-label-md font-bold uppercase tracking-wider cursor-not-allowed" disabled="">
+              BLOQUEADO (COMPLETA LVL-047 AL 049)
+            </button>
+</div>
+</div>
+<!-- ==================== NODO BLOQUEADO POSTERIOR (NIVEL 51) ==================== -->
+<div class="absolute top-[1660px] left-[360px] flex items-center group opacity-40">
+<div class="relative w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shadow-inner cursor-not-allowed">
+<span class="material-symbols-outlined text-text-disabled text-[20px]">lock</span>
+</div>
+<div class="ml-space-md font-label-sm text-label-sm text-text-disabled">
+<span>LVL-051 // BLOQUEADO</span>
+</div>
+</div>
+</div>
+<!-- ==================== BANNERS DE ACTOS POSTERIORES (BLOQUEADOS) ==================== -->
+<div class="w-full max-w-2xl flex flex-col gap-space-md mt-space-xl">
+<!-- BANNER ACTO III -->
+<div class="w-full p-space-md bg-surface-1/40 shadow-sm [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] opacity-50 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-disabled">// PROTOCOLO 03 · [NIVELES 51–75]</span>
+<h3 class="font-headline-md text-headline-md text-text-muted font-bold">FORJA DE MÉTODOS</h3>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Modularización, paso por valor vs referencia, sobrecarga y recursión pura.</p>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1 bg-surface-container font-label-sm text-label-sm text-text-disabled">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>BLOQUEADO</span>
+</div>
+</div>
+<!-- BANNER ACTO IV -->
+<div class="w-full p-space-md bg-surface-1/40 shadow-sm [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] opacity-40 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-disabled">// PROTOCOLO 04 · [NIVELES 76–100]</span>
+<h3 class="font-headline-md text-headline-md text-text-muted font-bold">CIUDADELA DE OBJETOS</h3>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">POO profunda: Clases, encapsulamiento, constructores, herencia y polimorfismo dinámico.</p>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1 bg-surface-container font-label-sm text-label-sm text-text-disabled">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>BLOQUEADO</span>
+</div>
+</div>
+<!-- BANNER ACTO V -->
+<div class="w-full p-space-md bg-surface-1/40 shadow-sm [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] opacity-30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-text-disabled">// PROTOCOLO 05 · [NIVELES 101–125]</span>
+<h3 class="font-headline-md text-headline-md text-text-muted font-bold">ARCHIVO DE COLECCIONES</h3>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Java Collections Framework: List, Set, Map, Generics y Lambdas.</p>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1 bg-surface-container font-label-sm text-label-sm text-text-disabled">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>BLOQUEADO</span>
+</div>
+</div>
+<!-- BANNER ACTO VI (JEFE FINAL) -->
+<div class="w-full p-space-md bg-surface-1/30 shadow-sm [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))] opacity-25 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-violet font-bold tracking-wider">// PROTOCOLO 06 · [NIVELES 126–150]</span>
+<h3 class="font-headline-md text-headline-md text-text-muted font-bold flex items-center gap-2">
+<span>NÚCLEO AVANZADO</span>
+<span class="material-symbols-outlined text-violet text-[20px]">skull</span>
+</h3>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Streams reactivos, Concurrencia con Hilos Virtuales Java 21 y Examen Final Titulación.</p>
+</div>
+<div class="flex items-center gap-1.5 px-space-md py-1 bg-surface-container font-label-sm text-label-sm text-violet">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>JEFE FINAL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><title>CodeQuest UDP · Dashboard</title><link rel="icon" href="/assets/logo.svg" type="image/svg+xml"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=JetBrains+Mono:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"amber":"#FFB547","bg-void":"#070A12","on-surface":"#dee1f9","surface-dim":"#0e1323","surface-variant":"#2f3446","primary-fixed-dim":"#2fd9f4","background":"#0e1323","on-background":"#dee1f9","primary":"#8aebff","surface-container-low":"#161b2b","red":"#FF5D73","green":"#3DDC97","border":"#2A3561","inverse-on-surface":"#2b3041","surface-container-lowest":"#080d1d","on-primary-fixed-variant":"#004e5a","surface-container":"#1a1f30","on-secondary-fixed-variant":"#4f319c","tertiary":"#ffd6a2","on-primary-container":"#005763","tertiary-fixed":"#ffddb4","border-strong":"#3B4A80","on-secondary-fixed":"#21005e","violet":"#A78BFA","surface-tint":"#2fd9f4","on-tertiary":"#452b00","tertiary-container":"#fcb244","surface-2":"#18213F","surface":"#0e1323","on-primary":"#00363e","surface-3":"#222D52","cyan":"#22D3EE","primary-fixed":"#a2eeff","on-tertiary-container":"#6e4600","on-error-container":"#ffdad6","surface-1":"#111831","secondary-fixed-dim":"#cebdff","secondary-fixed":"#e8ddff","on-primary-fixed":"#001f25","surface-bright":"#34394a","on-tertiary-fixed":"#291800","tertiary-fixed-dim":"#ffb955","surface-container-highest":"#2f3446","inverse-surface":"#dee1f9","text-muted":"#8C95B8","secondary-container":"#4f319c","on-secondary":"#381385","outline":"#859397","text-body":"#C7CEE8","bg-base":"#0B1020","on-secondary-container":"#bea8ff","on-surface-variant":"#bbc9cd","inverse-primary":"#006877","outline-variant":"#3c494c","java":"#F89820","primary-container":"#22d3ee","surface-container-high":"#25293a","on-error":"#690005","text-hi":"#EEF2FF","error-container":"#93000a","error":"#ffb4ab","text-disabled":"#566089","secondary":"#cebdff","on-tertiary-fixed-variant":"#633f00"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-md":"1.5rem","space-xl":"2.5rem","space-md":"1rem","margin":"1rem","gutter":"1rem","margin-md":"2rem"},fontFamily:{"label-md":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"code-body":["JetBrains Mono"],"body-lg":["IBM Plex Sans"],"headline-xl":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["IBM Plex Sans"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["IBM Plex Sans"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"code-body":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body data-page="dashboard" class="bg-bg-void font-body-md text-text-body antialiased selection:bg-cyan selection:text-bg-void"><aside class="fixed left-0 top-0 h-full w-72 bg-bg-base z-50 flex flex-col justify-between border-r border-border shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border bg-surface-1/50"><div class="w-8 h-8 rounded bg-surface-2 border border-border-strong flex items-center justify-center"><span class="material-symbols-outlined text-cyan text-[18px]">terminal</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-hi leading-none">CODEQUEST</span><span class="px-1 py-0.5 rounded bg-surface-3 border border-border text-[9px] font-label-sm text-cyan leading-none">UDP</span></div><span class="font-label-sm text-[9px] text-text-muted tracking-wider truncate uppercase mt-0.5">Facultad de Ingeniería</span></div></div><div class="p-space-md border-b border-border bg-surface-1/20"><div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5"><span>// MODO ACTUAL</span><span class="flex items-center gap-1 text-green text-[10px]"><span class="w-1.5 h-1.5 rounded-full bg-green animate-pulse"></span>ONLINE</span></div><div class="grid grid-cols-2 gap-1 p-1 bg-surface-2 rounded border border-border"><button class="py-1 px-2 rounded bg-cyan text-bg-void font-label-sm text-label-sm font-bold text-center tracking-wide">ESTUDIANTE</button><button class="py-1 px-2 rounded text-text-muted hover:text-text-hi font-label-sm text-label-sm text-center tracking-wide transition-colors">DOCENTE</button></div></div><nav class="flex flex-col py-space-sm gap-0.5" data-active-classes="bg-surface-2 text-cyan font-bold border-l-2 border-cyan"><div class="px-space-md pt-space-xs pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 01 RUTA FORMATIVA</div><a aria-current="page" class="flex items-center justify-between px-space-md py-2 transition-all bg-surface-2 text-cyan font-bold border-l-2 border-cyan" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">HUD-01</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="el-camino" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">route</span><span>El Camino</span></div><span class="px-1.5 py-0.5 rounded bg-violet/20 border border-violet/50 text-violet font-label-sm text-[9px] tracking-wide">ACTO II</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="practica-libre" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">code_blocks</span><span>Práctica Libre</span></div><span class="font-label-sm text-[9px] text-cyan tracking-tighter">IDE</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="logros-y-rangos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">military_tech</span><span>Logros &amp; Rangos</span></div><span class="font-label-sm text-[9px] text-amber tracking-tighter">XP</span></a><div class="px-space-md pt-space-md pb-1 font-label-sm text-[10px] text-text-disabled tracking-wider uppercase">// 02 GESTIÓN DOCENTE</div><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="panel-docente" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">team_dashboard</span><span>Panel Docente</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">ADM</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="generador-ia" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">psychology</span><span>Generador IA</span></div><span class="px-1.5 py-0.5 rounded bg-cyan/20 border border-cyan/60 text-cyan font-label-sm text-[9px] tracking-wide">NUEVO</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="banco-ejercicios" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dataset</span><span>Banco Ejercicios</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">JAVA</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-1 hover:text-on-surface transition-all font-body-md text-body-md" data-path="rubricas-analitica" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">query_stats</span><span>Rúbricas &amp; Analítica</span></div><span class="font-label-sm text-[9px] text-text-disabled tracking-tighter">MET</span></a></nav></div><div class="p-space-md border-t border-border bg-surface-1/40 flex flex-col gap-2"><a class="flex items-center justify-between text-on-surface-variant hover:text-cyan text-body-sm font-body-sm transition-colors" data-path="documentacion-tecnica" href="#"><span>Documentación Técnica</span><span class="material-symbols-outlined text-[16px]">open_in_new</span></a><div class="flex items-center justify-between pt-1 border-t border-border/50"><span class="font-label-sm text-[10px] text-text-disabled">v2.4.0-udp</span><span class="font-label-sm text-[10px] text-cyan">// Java 21 LTS</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-bg-base/95 backdrop-blur-md border-b border-border z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="font-label-sm text-[11px] text-text-muted">NODO:</span><span class="font-label-sm text-label-sm text-cyan px-2 py-0.5 rounded bg-surface-2 border border-border">SRV-UDP-SCL01</span></div><div class="h-4 w-px bg-border"></div><div class="flex items-center gap-1.5 text-text-muted font-label-sm text-[11px]"><span class="w-2 h-2 rounded-full bg-green shadow-[0_0_8px_#3DDC97]"></span><span>RED UDP CONECTADA</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-1 border border-border"><div class="flex flex-col"><div class="flex items-center justify-between gap-space-md text-[10px] font-label-sm"><span class="text-cyan font-bold">NVL 47/150</span><span class="text-amber font-mono">2.340 / 3.000 XP</span></div><div class="w-36 h-1.5 bg-surface-3 rounded-full mt-1 overflow-hidden"><div class="h-full bg-amber shadow-[0_0_12px_#FFB547]" style="width: 78%;"></div></div></div><div class="h-6 w-px bg-border"></div><div class="flex items-center gap-1 px-1 text-amber font-label-sm text-label-sm" title="Racha de estudio activa"><span class="text-base leading-none">🔥</span><span class="font-bold">6D</span></div></div><div class="flex items-center gap-2"><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-cyan hover:border-cyan transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cyan shadow-[0_0_6px_#22D3EE]"></span></button><button class="relative w-8 h-8 rounded bg-surface-2 border border-border flex items-center justify-center text-on-surface-variant hover:text-amber hover:border-amber transition-colors"><span class="material-symbols-outlined text-[18px]">emoji_events</span></button><div class="flex items-center gap-2 pl-2 border-l border-border"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-[11px] text-text-hi font-bold leading-tight">est.diego.p</span><span class="font-label-sm text-[9px] text-text-muted leading-none">UDP INF-302</span></div></div></div></div></header><main class="relative pt-16 min-h-screen bg-bg-base"><div class="flex flex-col w-full">
+<div class="p-margin-md flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- TOP NOTIFICATION BANNER / ACADEMIC TELEMETRY -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm px-space-md py-space-xs rounded bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-1.5 py-0.5 rounded bg-surface-2 text-cyan font-label-sm text-label-sm">SEM-07</span>
+<span class="text-text-muted font-body-sm text-body-sm truncate">Cátedra activa: Laboratorio de Algoritmos Avanzados · Servidor de compilación UDP-LTS-21 en línea</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="text-text-disabled">// PING: <span class="text-green">14ms</span></span>
+<span class="text-text-disabled">// MULTIPLICADOR: <span class="text-amber">x1.25 XP</span></span>
+<span class="text-text-disabled">// SECCIÓN: <span class="text-text-hi">INF-204-1</span></span>
+</div>
+</div>
+<!-- 1. STUDENT HUD HEADER -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-stretch">
+<!-- Institutional Greeting & Status Deck -->
+<div class="xl:col-span-8 flex flex-col justify-between p-space-lg rounded bg-surface-container shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm text-text-muted font-label-sm text-label-sm uppercase">
+<span class="px-2 py-0.5 rounded bg-surface-2 text-cyan">INF-204</span>
+<span>Facultad de Ingeniería y Ciencias UDP</span>
+<span>//</span>
+<span class="text-text-hi">Programación Orientada a Objetos</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-sm pt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-text-hi tracking-tight">
+              ¡Hola, Alex! <span class="text-cyan font-headline-md text-headline-md font-normal">¿Listo para subir de nivel?</span>
+</h1>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Estado: <span class="text-green">En Misión</span></span>
+</div>
+<p class="font-body-md text-body-md text-text-body max-w-2xl">
+            Has mantenido consistencia técnica sobresaliente esta semana. Faltan únicamente 3 nodos prácticos para desbloquear la instancia de evaluación <span class="text-violet font-semibold">Checkpoint 50: Examen de Fin de Acto II</span>.
+          </p>
+</div>
+<!-- Metric Cards Quad Grid -->
+<div class="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-gutter mt-space-lg">
+<!-- Level & XP -->
+<div class="p-space-md rounded bg-surface-1 shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm">
+<span>// RANGO ACTUAL</span>
+<span class="text-amber font-label-sm text-label-sm">LVL-47</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-hi leading-tight">Compilador Neófito</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mt-1">
+<span class="text-text-muted">2.340 / 3.000 XP</span>
+<span class="text-amber font-bold">78%</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-3 mt-1.5 overflow-hidden">
+<div class="h-full bg-amber rounded shadow-[0_0_10px_#FFB547]" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Study Streak -->
+<div class="p-space-md rounded bg-surface-1 shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm">
+<span>// CADENCIA ACADÉMICA</span>
+<span class="px-1 py-0.5 rounded bg-amber/10 text-amber font-label-sm text-label-sm">+25% XP</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<div class="font-headline-lg text-headline-lg text-text-hi flex items-center gap-1.5">
+<span class="text-amber">🔥</span> 6 Días
+                </div>
+<div class="font-body-sm text-body-sm text-text-muted mt-0.5">Racha activa consecutiva</div>
+</div>
+<div class="flex gap-1">
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-amber"></span>
+<span class="w-1.5 h-6 rounded bg-surface-3"></span>
+</div>
+</div>
+</div>
+<!-- Problems Solved -->
+<div class="p-space-md rounded bg-surface-1 shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm">
+<span>// ENTREGAS ACADÉMICAS</span>
+<span class="text-green font-label-sm text-label-sm">OPTIMAL</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-text-hi">
+                142 <span class="font-body-sm text-body-sm text-text-muted font-normal">resueltas</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mt-0.5">
+<span class="text-text-muted">Efectividad global</span>
+<span class="text-green font-bold">94.2%</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-3 mt-1.5 overflow-hidden">
+<div class="h-full bg-green rounded" style="width: 94.2%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Radar / Competency Matrix -->
+<div class="xl:col-span-4 p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">// TELEMETRÍA DE DOMINIO</span>
+<span class="font-headline-sm text-headline-sm text-text-hi">Competencias Java</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-2 text-cyan font-label-sm text-label-sm">AUDIT: OK</span>
+</div>
+<!-- Radar Chart Inline SVG -->
+<div class="relative flex items-center justify-center my-space-sm">
+<svg class="w-52 h-52 text-surface-3" viewbox="0 0 200 200">
+<!-- Concentric Background Polygons -->
+<polygon fill="currentColor" opacity="0.3" points="100,20 180,100 100,180 20,100"></polygon>
+<polygon fill="currentColor" opacity="0.45" points="100,45 155,100 100,155 45,100"></polygon>
+<polygon fill="currentColor" opacity="0.6" points="100,70 130,100 100,130 70,100"></polygon>
+<!-- Axes -->
+<line opacity="0.5" stroke="currentColor" stroke-width="1" x1="100" x2="100" y1="20" y2="180"></line>
+<line opacity="0.5" stroke="currentColor" stroke-width="1" x1="20" x2="180" y1="100" y2="100"></line>
+<!-- Student Profile Polygon: Syntax=95%, Loops=88%, OOP=54%, Collections=30% -->
+<!-- Top: Syntax (100, 100 - (80*0.95)) = (100, 24) -->
+<!-- Right: Loops (100 + (80*0.88), 100) = (170.4, 100) -->
+<!-- Bottom: OOP (100, 100 + (80*0.54)) = (100, 143.2) -->
+<!-- Left: Collections (100 - (80*0.30), 100) = (76, 100) -->
+<polygon fill="#22D3EE" fill-opacity="0.25" points="100,24 170.4,100 100,143.2 76,100" stroke="#22D3EE" stroke-width="2"></polygon>
+<!-- Highlight Points -->
+<circle cx="100" cy="24" fill="#22D3EE" r="3.5"></circle>
+<circle cx="170.4" cy="100" fill="#3DDC97" r="3.5"></circle>
+<circle cx="100" cy="143.2" fill="#A78BFA" r="3.5"></circle>
+<circle cx="76" cy="100" fill="#FFB547" r="3.5"></circle>
+</svg>
+<!-- Label Overlays -->
+<div class="absolute -top-1 text-center font-label-sm text-[10px] text-cyan">Sintaxis 95%</div>
+<div class="absolute -right-2 text-center font-label-sm text-[10px] text-green">Bucles 88%</div>
+<div class="absolute -bottom-1 text-center font-label-sm text-[10px] text-violet">POO 54%</div>
+<div class="absolute -left-2 text-center font-label-sm text-[10px] text-amber">Colecciones 30%</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-space-xs font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<span class="text-text-muted">Sintaxis</span>
+<span class="text-cyan font-bold">A+</span>
+</div>
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<span class="text-text-muted">Bucles</span>
+<span class="text-green font-bold">A</span>
+</div>
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<span class="text-text-muted">POO</span>
+<span class="text-violet font-bold">B-</span>
+</div>
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<span class="text-text-muted">Colecciones</span>
+<span class="text-amber font-bold">C</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2 & 3. WORKSPACE (ACTIVE LAB) + COMMUNITY / ROADMAP LATERAL -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-start">
+<!-- MAIN WORKSPACE: ACTIVE CODE ENVIRONMENT -->
+<section class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Mission Header Card -->
+<div class="p-space-md rounded bg-surface-container shadow-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-cyan">
+<span class="material-symbols-outlined text-[16px]">target</span>
+<span>MISIÓN EN CURSO // LVL-047</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-hi tracking-tight truncate">
+              Procesamiento de Cuadrículas con Bucles Anidados
+            </h2>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Implementa el algoritmo de escaneo perimetral para identificar coordenadas fronterizas en una matriz ortogonal de radar 2D.
+            </p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-center shrink-0">
+<span class="px-2.5 py-1 rounded bg-amber/15 text-amber font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">military_tech</span> +120 XP
+            </span>
+<span class="px-2 py-1 rounded bg-surface-2 text-text-muted font-label-sm text-label-sm">
+              DOC: INF-204-PRAC-04
+            </span>
+</div>
+</div>
+<!-- Cloud IDE Interface Container -->
+<div class="flex flex-col rounded bg-surface-container shadow-xl overflow-hidden">
+<!-- Editor Titlebar & Tab Strip -->
+<div class="flex flex-wrap items-center justify-between bg-surface-container-low px-space-md py-1.5 gap-space-sm">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<!-- Active Tab -->
+<button class="px-3 py-1.5 rounded bg-surface-2 text-cyan font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-amber text-[16px]">coffee</span>
+<span>RadarPerimetro.java</span>
+<span class="w-1.5 h-1.5 rounded-full bg-cyan"></span>
+</button>
+<!-- Secondary Tab -->
+<button class="px-3 py-1.5 rounded text-text-muted hover:text-text-hi hover:bg-surface-1 flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+<span>RadarPerimetroTest.java</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-[11px] text-text-disabled">JDK 21.0.3 · UTF-8</span>
+<div class="h-3 w-px bg-surface-3"></div>
+<button class="text-text-muted hover:text-text-hi p-1 transition-colors" title="Restaurar plantilla">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+<button class="text-text-muted hover:text-text-hi p-1 transition-colors" title="Expandir editor">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Code View Area -->
+<div class="p-space-md bg-surface-container-lowest font-code-body text-code-body text-text-body overflow-x-auto selection:bg-cyan selection:text-bg-void leading-6">
+<table class="w-full border-collapse">
+<tbody>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">01</td>
+<td><span class="text-violet font-semibold">package</span> <span class="text-text-hi">cl.udp.ingenieria.radar</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">02</td>
+<td><span class="text-violet font-semibold">import</span> <span class="text-text-hi">java.util.ArrayList</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">03</td>
+<td><span class="text-violet font-semibold">import</span> <span class="text-text-hi">java.util.List</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">04</td>
+<td></td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">05</td>
+<td><span class="text-text-disabled italic">// Misión UDP: Calcular suma de celdas en el borde perimétrico</span></td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">06</td>
+<td><span class="text-violet font-semibold">public class</span> <span class="text-cyan font-bold">RadarPerimetro</span> {</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">07</td>
+<td class="pl-4"><span class="text-violet font-semibold">public static int</span> <span class="text-amber">calcularSumaBorde</span>(<span class="text-violet">int</span>[][] <span class="text-text-hi">matriz</span>) {</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">08</td>
+<td class="pl-8"><span class="text-violet font-semibold">if</span> (<span class="text-text-hi">matriz</span> == <span class="text-violet font-semibold">null</span> || <span class="text-text-hi">matriz</span>.length == <span class="text-amber">0</span>) <span class="text-violet font-semibold">return 0</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">09</td>
+<td class="pl-8"><span class="text-violet">int</span> <span class="text-text-hi">total</span> = <span class="text-amber">0</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">10</td>
+<td class="pl-8"><span class="text-violet">int</span> <span class="text-text-hi">filas</span> = <span class="text-text-hi">matriz</span>.length;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">11</td>
+<td class="pl-8"><span class="text-violet">int</span> <span class="text-text-hi">cols</span> = <span class="text-text-hi">matriz</span>[<span class="text-amber">0</span>].length;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">12</td>
+<td></td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">13</td>
+<td class="pl-8"><span class="text-violet font-semibold">for</span> (<span class="text-violet">int</span> <span class="text-text-hi">i</span> = <span class="text-amber">0</span>; <span class="text-text-hi">i</span> &lt; <span class="text-text-hi">filas</span>; <span class="text-text-hi">i</span>++) {</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">14</td>
+<td class="pl-12"><span class="text-violet font-semibold">for</span> (<span class="text-violet">int</span> <span class="text-text-hi">j</span> = <span class="text-amber">0</span>; <span class="text-text-hi">j</span> &lt; <span class="text-text-hi">cols</span>; <span class="text-text-hi">j</span>++) {</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">15</td>
+<td class="pl-16"><span class="text-violet font-semibold">if</span> (<span class="text-text-hi">i</span> == <span class="text-amber">0</span> || <span class="text-text-hi">i</span> == <span class="text-text-hi">filas</span> - <span class="text-amber">1</span> || <span class="text-text-hi">j</span> == <span class="text-amber">0</span> || <span class="text-text-hi">j</span> == <span class="text-text-hi">cols</span> - <span class="text-amber">1</span>) {</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">16</td>
+<td class="pl-20"><span class="text-text-hi">total</span> += <span class="text-text-hi">matriz</span>[<span class="text-text-hi">i</span>][<span class="text-text-hi">j</span>];</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">17</td>
+<td class="pl-16">}</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">18</td>
+<td class="pl-12">}</td>
+</tr>
+<tr class="hover:bg-surface-1/40 bg-surface-2/40">
+<td class="text-cyan select-none text-right pr-4 w-10 font-label-sm text-[11px]">19</td>
+<td class="pl-8">}</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">20</td>
+<td class="pl-8"><span class="text-violet font-semibold">return</span> <span class="text-text-hi">total</span>;</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">21</td>
+<td class="pl-4">}</td>
+</tr>
+<tr class="hover:bg-surface-1/40">
+<td class="text-text-disabled select-none text-right pr-4 w-10 font-label-sm text-[11px]">22</td>
+<td>}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- IDE Action Bar -->
+<div class="flex flex-wrap items-center justify-between px-space-md py-2.5 bg-surface-container-low gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-green">
+<span class="w-2 h-2 rounded-full bg-green animate-pulse"></span> Sintaxis validada
+              </span>
+<span class="text-text-disabled text-label-sm">//</span>
+<span class="font-label-sm text-[11px] text-text-muted">Auto-guardado 12:44:02</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 rounded bg-surface-2 hover:bg-surface-3 text-text-hi font-label-sm text-label-sm flex items-center gap-1.5 transition-colors shadow-sm" id="btn-run">
+<span class="material-symbols-outlined text-green text-[18px]">play_arrow</span>
+<span>Ejecutar Código</span>
+</button>
+<button class="px-space-md py-1.5 rounded bg-cyan text-bg-void hover:bg-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-all shadow-[0_0_16px_rgba(34,211,238,0.35)]" id="btn-submit">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Enviar Solución</span>
+</button>
+</div>
+</div>
+<!-- Execution Console / Test Matrix Bottom Deck -->
+<div class="bg-surface-1 p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="text-text-muted uppercase">// CONSOLA DE PRUEBAS UNITARIAS</span>
+<span class="px-1.5 py-0.2 rounded bg-green/15 text-green font-bold">3/3 SUPERADAS</span>
+</div>
+<div class="flex items-center gap-space-md text-text-muted">
+<span>Tiempo de CPU: <span class="text-text-hi">14ms</span></span>
+<span>Memoria Heap: <span class="text-text-hi">32.4 MB</span></span>
+</div>
+</div>
+<!-- Assertions List -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xs font-code-body text-[12px]">
+<div class="p-2 rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<span class="text-green font-bold">[ PASS ]</span>
+<span class="text-text-hi truncate">testCuadricula4x4()</span>
+</div>
+<span class="text-text-muted text-[10px] shrink-0">4ms</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<span class="text-green font-bold">[ PASS ]</span>
+<span class="text-text-hi truncate">testMatrizIrregular()</span>
+</div>
+<span class="text-text-muted text-[10px] shrink-0">3ms</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<span class="text-green font-bold">[ PASS ]</span>
+<span class="text-text-hi truncate">testMatrizVacia()</span>
+</div>
+<span class="text-text-muted text-[10px] shrink-0">1ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Learning Asset / Visual Context -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+<div class="p-space-md rounded bg-surface-container shadow-md flex items-center gap-space-md">
+<div class="w-20 h-20 rounded bg-surface-2 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-cyan text-[36px]">developer_board</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-label-sm text-label-sm text-amber">// DIAGRAMA DE MEMORIA</span>
+<h3 class="font-headline-sm text-headline-sm text-text-hi truncate">Inspección de Punteros 2D</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">
+                Revisa la representación contigua de referencias en la pila JVM para matrices de arrays anidados.
+              </p>
+</div>
+</div>
+<div class="p-space-md rounded bg-surface-container shadow-md flex items-center gap-space-md">
+<div class="w-20 h-20 rounded bg-surface-2 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-violet text-[36px]">psychology_alt</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-label-sm text-label-sm text-violet">// ASISTENCIA HEURÍSTICA</span>
+<h3 class="font-headline-sm text-headline-sm text-text-hi truncate">Complejidad Temporal O(N*M)</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">
+                Tu solución recorre toda la cuadrícula. Considera recorrer únicamente los 4 lados directos para O(2N + 2M).
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. LATERAL HUD: ROADMAP, OPTIONAL CHALLENGES & SQUAD -->
+<aside class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Next Major Milestone Target: Checkpoint 50 -->
+<div class="p-space-lg rounded bg-surface-container shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-violet/20 text-violet font-label-sm text-label-sm uppercase font-bold">
+                OBJETIVO MAYOR
+              </span>
+<span class="font-label-sm text-label-sm text-amber font-mono">+500 XP BOSS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-text-muted tracking-wider uppercase">// HITO ACADÉMICO</span>
+<h2 class="font-headline-md text-headline-md text-text-hi">Checkpoint 50: Examen de Fin de Acto II</h2>
+<p class="font-body-sm text-body-sm text-text-body mt-1">
+                Evaluación integral de Estructuras Anidadas, Manejo de Excepciones y Modelado de Clases Inmutables.
+              </p>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-text-muted pt-space-xs">
+<span>Progreso de prerrequisitos:</span>
+<span class="text-text-hi font-bold">3 / 6 Retos Superados</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-3 overflow-hidden">
+<div class="h-full bg-violet rounded shadow-[0_0_12px_#A78BFA]" style="width: 50%;"></div>
+</div>
+<button class="w-full mt-2 py-2 rounded bg-surface-2 hover:bg-surface-3 text-violet font-label-sm text-label-sm font-bold flex items-center justify-center gap-1.5 transition-colors">
+<span>Ver Criterios de Evaluación</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Optional Practice Missions -->
+<div class="p-space-md rounded bg-surface-container shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">// EJERCITACIÓN COMPLEMENTARIA</span>
+<span class="text-cyan font-label-sm text-[11px]">DISPONIBLES: 02</span>
+</div>
+<!-- Challenge 1 -->
+<div class="p-space-sm rounded bg-surface-1 hover:bg-surface-2 transition-all flex items-center justify-between gap-space-sm cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-surface-3 flex items-center justify-center text-cyan shrink-0">
+<span class="material-symbols-outlined text-[18px]">grid_4x4</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="font-label-md text-label-md text-text-hi truncate">Transposición de Matrices 4x4</div>
+<div class="font-body-sm text-[11px] text-text-muted truncate">Algoritmo in-place sin memoria auxiliar</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-amber/10 text-amber font-label-sm text-[10px] font-bold">+75 XP</span>
+</div>
+</div>
+<!-- Challenge 2 -->
+<div class="p-space-sm rounded bg-surface-1 hover:bg-surface-2 transition-all flex items-center justify-between gap-space-sm cursor-pointer shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-surface-3 flex items-center justify-center text-green shrink-0">
+<span class="material-symbols-outlined text-[18px]">satellite_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="font-label-md text-label-md text-text-hi truncate">Filtro de Telemetría UDP</div>
+<div class="font-body-sm text-[11px] text-text-muted truncate">Parseo de tramas y descarte de ruido</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-amber/10 text-amber font-label-sm text-[10px] font-bold">+50 XP</span>
+</div>
+</div>
+</div>
+<!-- Recent Unlocked Badges -->
+<div class="p-space-md rounded bg-surface-container shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">// MEDALLERO RECIENTE</span>
+<a class="text-text-muted hover:text-cyan font-label-sm text-[11px] transition-colors" href="#">Ver todas (18)</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Badge 1 -->
+<div class="p-space-sm rounded bg-surface-1 flex flex-col items-center text-center gap-1.5">
+<div class="w-12 h-12 rounded-full bg-cyan/10 flex items-center justify-center text-cyan shadow-[0_0_12px_rgba(34,211,238,0.2)]">
+<span class="material-symbols-outlined text-[24px]">all_inclusive</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-hi font-bold leading-tight">Bucles de Precisión</span>
+<span class="font-body-sm text-[10px] text-text-muted">Cero bucles infinitos en 20 envíos</span>
+</div>
+<!-- Badge 2 -->
+<div class="p-space-sm rounded bg-surface-1 flex flex-col items-center text-center gap-1.5">
+<div class="w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center text-amber shadow-[0_0_12px_rgba(255,181,71,0.2)]">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-hi font-bold leading-tight">Eficiencia Temporal</span>
+<span class="font-body-sm text-[10px] text-text-muted">Ejecución sub-15ms en 5 matrices</span>
+</div>
+</div>
+</div>
+<!-- Live Section Peer Activity Feed -->
+<div class="p-space-md rounded bg-surface-container shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-green animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">// COMPAÑEROS EN VIVO</span>
+</div>
+<span class="font-label-sm text-[11px] text-cyan">INF-204</span>
+</div>
+<div class="flex flex-col gap-space-xs font-label-sm text-[11px]">
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<div class="w-6 h-6 rounded bg-surface-3 flex items-center justify-center text-text-hi font-bold text-[10px]">
+                  MP
+                </div>
+<div class="flex flex-col truncate">
+<span class="text-text-hi font-semibold truncate">matias.pavez</span>
+<span class="text-text-muted text-[9px] truncate">Completó LVL-046 · Matrices 3D</span>
+</div>
+</div>
+<span class="text-green shrink-0">+90 XP</span>
+</div>
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<div class="w-6 h-6 rounded bg-surface-3 flex items-center justify-center text-text-hi font-bold text-[10px]">
+                  CS
+                </div>
+<div class="flex flex-col truncate">
+<span class="text-text-hi font-semibold truncate">camila.soto</span>
+<span class="text-text-muted text-[9px] truncate">Desbloqueó Insignia Recursión</span>
+</div>
+</div>
+<span class="text-amber shrink-0">LOGRO</span>
+</div>
+<div class="p-2 rounded bg-surface-1 flex items-center justify-between">
+<div class="flex items-center gap-2 truncate">
+<div class="w-6 h-6 rounded bg-surface-3 flex items-center justify-center text-text-hi font-bold text-[10px]">
+                  BV
+                </div>
+<div class="flex flex-col truncate">
+<span class="text-text-hi font-semibold truncate">benjamin.v</span>
+<span class="text-text-muted text-[9px] truncate">Entregó Reto Opcional UDP</span>
+</div>
+</div>
+<span class="text-green shrink-0">+50 XP</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- FOOTER TELEMETRY STRIP -->
+<footer class="mt-space-md p-space-md rounded bg-surface-container flex flex-wrap items-center justify-between gap-space-md text-text-muted font-label-sm text-[11px]">
+<div class="flex items-center gap-space-md">
+<span>© 2025 CODEQUEST UDP</span>
+<span>Escuela de Informática y Telecomunicaciones</span>
+<span>// Campus Ejército, Santiago de Chile</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-green">● COMPILADOR NATIVO ACTIVO</span>
+<span>LATENCIA: 14MS</span>
+<span class="text-cyan">JAVA 21.0.3 LTS</span>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for simulation
+  const btnRun = document.getElementById('btn-run');
+  const btnSubmit = document.getElementById('btn-submit');
+  
+  if (btnRun) {
+    btnRun.addEventListener('click', () => {
+      btnRun.innerHTML = '<span class="material-symbols-outlined text-green text-[18px] animate-spin">refresh</span><span>Compilando...</span>';
+      setTimeout(() => {
+        btnRun.innerHTML = '<span class="material-symbols-outlined text-green text-[18px]">play_arrow</span><span>Ejecutar Código</span>';
+      }, 700);
+    });
+  }
+
+  if (btnSubmit) {
+    btnSubmit.addEventListener('click', () => {
+      btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-pulse">cloud_sync</span><span>Enviando...</span>';
+      setTimeout(() => {
+        btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span>¡Aprobado!</span>';
+        btnSubmit.classList.remove('bg-cyan');
+        btnSubmit.classList.add('bg-green');
+      }, 900);
+    });
+  }
+</script></main></div><script src="/assets/app.js"></script></body></html>
